@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import Header from '../components/Header';
 import './OrdersPage.css';
+import BuyAgainIcon from '../assets/images/icons/buy-again.png';
 
 export default function OrdersPage() {
 	return (
@@ -45,7 +46,7 @@ export default function OrdersPage() {
 								<div className="product-delivery-date">Arriving on: August 15</div>
 								<div className="product-quantity">Quantity: 1</div>
 								<button className="buy-again-button button-primary">
-									<img className="buy-again-icon" src="images/icons/buy-again.png" />
+									<img className="buy-again-icon" src={BuyAgainIcon} />
 									<span className="buy-again-message">Add to Cart</span>
 								</button>
 							</div>
@@ -71,7 +72,7 @@ export default function OrdersPage() {
 								<div className="product-delivery-date">Arriving on: August 19</div>
 								<div className="product-quantity">Quantity: 2</div>
 								<button className="buy-again-button button-primary">
-									<img className="buy-again-icon" src="images/icons/buy-again.png" />
+									<img className="buy-again-icon" src={BuyAgainIcon} />
 									<span className="buy-again-message">Add to Cart</span>
 								</button>
 							</div>
@@ -117,7 +118,7 @@ export default function OrdersPage() {
 								<div className="product-delivery-date">Arriving on: June 17</div>
 								<div className="product-quantity">Quantity: 2</div>
 								<button className="buy-again-button button-primary">
-									<img className="buy-again-icon" src="images/icons/buy-again.png" />
+									<img className="buy-again-icon" src={BuyAgainIcon} />
 									<span className="buy-again-message">Add to Cart</span>
 								</button>
 							</div>
