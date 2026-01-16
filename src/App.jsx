@@ -14,7 +14,7 @@ function App() {
       <Route path='checkout' element={<CheckoutPage />} />
       <Route path='orders' element={<OrdersPage />} />
       <Route path='tracking' element={<TrackingPage />} />
-      <Route path='*' element={<NotFoundPage />} ></Route>
+      <Route path='*' element={<NotFoundPage />} />
     </Routes>
     
   )
