@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import './Header.css';
 import CartIcon from '../assets/images/icons/cart-icon.png';
@@ -6,6 +7,8 @@ import LogoWhite from '../assets/images/logo-white.png';
 import MobileLogoWhite from '../assets/images/mobile-logo-white.png';
 
 export default function Header({ cart }) {
+    const [searchQuery, setSearchQuery] = useState('');
+
     let totalCartQuantity = 0;
 
     cart.map((cartItem) => {
@@ -24,9 +27,11 @@ export default function Header({ cart }) {
             </div>
 
             <div className="middle-section">
-                <input className="search-bar" type="text" placeholder="Search" />
+                <input className="search-bar" type="text" placeholder="Search"
+                    value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
 
-                <button className="search-button">
+                <button className="search-button"
+                    onClick={() => console.log(searchQuery)} >
                     <img className="search-icon" src={SearchIcon} />
                 </button>
             </div>
