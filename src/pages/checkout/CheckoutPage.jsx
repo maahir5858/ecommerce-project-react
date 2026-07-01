@@ -63,9 +63,10 @@ export default function Checkout({ cart, getCart }) {
                       </div>
                       {deliveryOptions.map((deliveryOption) => {
                         const updateDeliveryOption = async () => {
-                          axios.put(`/api/cart-items/${cartItem.productId}`, {
+                          await axios.put(`/api/cart-items/${cartItem.productId}`, {
                             deliveryOptionId: deliveryOption.id
-                          })
+                          });
+                          await getCart();
                         }
                         return (
                           <div key={deliveryOption.id} className="delivery-option"
